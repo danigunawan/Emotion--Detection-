@@ -24,7 +24,9 @@ function startVideo() {
     )
   }
 
+// Setting up detection of face 
 video.addEventListener('play', () => {
+  // As videos starts playing api is capturing face every 100ms  
   setInterval(async () => {
     const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks()
     .withFaceExpressions()
