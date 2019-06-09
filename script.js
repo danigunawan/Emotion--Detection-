@@ -40,5 +40,7 @@ video.addEventListener('play', () => {
     .withFaceExpressions()
 
     console.log(detections);
+    // Creating const to detect the movement of the face 
+    const resizedDetections = faceapi.resizeResults(detections, displaySize);
   }, 100);
 });
