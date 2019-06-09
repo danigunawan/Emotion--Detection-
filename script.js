@@ -42,5 +42,9 @@ video.addEventListener('play', () => {
     console.log(detections);
     // Creating const to detect the movement of the face 
     const resizedDetections = faceapi.resizeResults(detections, displaySize);
+    // Drawing the box 
+    faceapi.draw.drawDetections(canvas, resizedDetections)
   }, 100);
+
+
 });
