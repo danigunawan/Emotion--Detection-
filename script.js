@@ -26,10 +26,13 @@ function startVideo() {
 
 // Setting up detection of face 
 video.addEventListener('play', () => {
+
   // Creating a canvas element 
   const canvas  = faceapi.createCanvasFromMedia(video);
   // Adding canves element to the body 
-  document.body.append(canvas)
+  document.body.append(canvas);
+  //Displaying canvas in a absolute position 
+  const displaySize = { width: video.width, height: video.height}
   
   // As videos starts playing api is capturing face every 100ms  
   setInterval(async () => {
